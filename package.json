@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "crypto": "^0.0.3"
+  },
+  "devDependencies": {
+    "request": "^2.74.0"
+  }
+}
