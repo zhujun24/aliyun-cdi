@@ -1,4 +1,10 @@
 var crypto = require('crypto');
+var encodeStr = function (str) {
+  str.replace(/\!\(\)/, function () {
+    str = escape(str);
+  });
+  return str;
+};
 
 // 获取参数
 function getParams(params) {
@@ -18,9 +24,9 @@ function getParams(params) {
     Version: params.Version || '2016-06-21'
   };
   if (params.Action === 'ImageDetection') {
-    defaultParams.ImageUrl = params.ImageUrl;
+    defaultParams.ImageUrl = encodeStr(params.ImageUrl);
   } else if (params.Action === 'TextKeywordFilter') {
-    defaultParams.Text = params.Text;
+    defaultParams.Text = encodeStr(params.Text);
   }
   return defaultParams;
 }
