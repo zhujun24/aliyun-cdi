@@ -1,9 +1,6 @@
 var crypto = require('crypto');
 var encodeStr = function (str) {
-  if (/\!|\(|\)/.test(str)) {
-    str = escape(str);
-  }
-  return str;
+  return str.replace(/!/g, '%21').replace(/\(/g, '%28').replace(/\)/g, '%29');
 };
 
 // 获取参数

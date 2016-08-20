@@ -1,6 +1,6 @@
 {
   "name": "aliyun-cdi",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "阿里云内容检测API",
   "main": "index.js",
   "scripts": {
