@@ -1,8 +1,8 @@
 var crypto = require('crypto');
 var encodeStr = function (str) {
-  str.replace(/\!\(\)/, function () {
+  if (/\!|\(|\)/.test(str)) {
     str = escape(str);
-  });
+  }
   return str;
 };
 
