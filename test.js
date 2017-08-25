@@ -6,7 +6,7 @@ var url = composeUrl({
   AccessKeySecret: 'XXX', // 你申请的AccessKeySecret
   Action: 'ImageDetection',
   Scene: ['ocr'],
-  ImageUrl: '["http://ww1.sinaimg.cn/mw690/5375acf5gw1f6amimko3hj20x20lsagc.jpg"]'
+  ImageUrl: ['http://ww1.sinaimg.cn/mw690/5375acf5gw1f6amimko3hj20x20lsagc.jpg']
 });
 
 request.post(url, function (err, res, body) {
@@ -38,7 +38,7 @@ var url3 = composeUrl({
   AccessKeySecret: 'XXX', // 你申请的AccessKeySecret
   Action: 'ImageDetection',
   Scene: ['porn'],
-  ImageUrl: '["http://dun.163.com/res/sample/sex_2.jpg"]'
+  ImageUrl: ['http://dun.163.com/res/sample/sex_2.jpg']
 });
 
 request.post(url3, function (err, res, body) {
