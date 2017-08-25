@@ -18,12 +18,12 @@ var url = composeUrl({
   AccessKeyID: 'XXX', // 你申请的AccessKeyID
   AccessKeySecret: 'XXX', // 你申请的AccessKeySecret
   Action: 'ImageDetection', // Action
-  Scene: '["porn"]', // 场景
-  ImageUrl: '["http://dun.163.com/res/sample/sex_2.jpg"]' // 
+  Scene: ['porn'], // 场景
+  ImageUrl: '["http://dun.163.com/res/sample/sex_2.jpg"]' // 资源实例
 });
 
 request.post(url, function (err, res, body) {
-  if (res.statusCode == 200) {
+  if (res.statusCode === 200) {
     console.log(JSON.stringify(JSON.parse(body), null, 2));
   } else {
     console.log(res.statusCode, err);

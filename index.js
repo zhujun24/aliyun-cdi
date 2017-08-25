@@ -9,7 +9,7 @@ function getParams(params) {
     Async: params.Async || false,
     // Text: '这样做的历史原因是你要是真删了万一以后给你一个需求，要求恢复删除数据',
     // ImageUrl: '["http://dun.163.com/res/sample/sex_2.jpg"]',
-    Scene: params.Scene,
+    Scene: JSON.stringify(params.Scene),
     // RegionId: 'cn-hangzhou',
     AccessKeyId: params.AccessKeyID,
     Format: params.Format || 'JSON',
