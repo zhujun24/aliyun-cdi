@@ -19,7 +19,7 @@ var url = composeUrl({
   AccessKeySecret: 'XXX', // 你申请的AccessKeySecret
   Action: 'ImageDetection', // Action
   Scene: ['porn'], // 场景
-  ImageUrl: '["http://dun.163.com/res/sample/sex_2.jpg"]' // 资源实例
+  ImageUrl: '[http://dun.163.com/res/sample/sex_2.jpg]' // 资源实例
 });
 
 request.post(url, function (err, res, body) {
